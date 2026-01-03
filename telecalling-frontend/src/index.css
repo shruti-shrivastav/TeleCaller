@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fffaf0; /* warm paper white */
+  --foreground: #1a1a1a;
+
+  --card: #fff8ec;
+  --card-foreground: #1a1a1a;
+
+  --popover: #fffaf0;
+  --popover-foreground: #1a1a1a;
+
+  --primary: #6db5ff; /* crayon sky blue */
+  --primary-foreground: #ffffff;
+
+  --secondary: #ffe26d; /* butter yellow */
+  --secondary-foreground: #1a1a1a;
+
+  --accent: #ff88b7; /* candy pink */
+  --accent-foreground: #1a1a1a;
+
+  --destructive: #ff6b6b; /* warm coral red */
+  --destructive-foreground: #ffffff;
+
+  --muted: #f9e9d2; /* beige-orange tint */
+  --muted-foreground: #5c4a3d;
+
+  --label-foreground: #403b36; /* dark readable tone on warm bg */
+
+  --border: #f0e0c5;
+  --input: #f0e0c5;
+  --ring: #6db5ff;
+
+  --radius: 0.75rem;
+
+  --sidebar: #fff4da;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffeec2;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #f0e0c5;
+  --sidebar-ring: var(--primary);
+}
+
+/* ---------- DARK (crayon chalkboard) ---------- */
+.dark {
+  --background: #1c1b21; /* soft blackboard violet */
+  --foreground: #fdf7ed;
+
+  --card: #23222a;
+  --card-foreground: #fdf7ed;
+
+  --popover: #23222a;
+  --popover-foreground: #fdf7ed;
+
+  --primary: #90c9ff; /* pastel sky blue chalk */
+  --primary-foreground: #101010;
+
+  --secondary: #ffe59a; /* chalky yellow */
+  --secondary-foreground: #101010;
+
+  --accent: #ffa0c6; /* light pink chalk */
+  --accent-foreground: #101010;
+
+  --destructive: #ff5252; /* chalky red */
+  --destructive-foreground: #101010;
+
+  --muted: #2d2b33;
+  --muted-foreground: #bcb6aa;
+
+  --label-foreground: #e2dccf; /* chalky off-white on dark card */
+  --border: #3a3942;
+  --input: #3a3942;
+  --ring: #90c9ff;
+
+  --sidebar: #2a2932;
+  --sidebar-foreground: #f5f2e9;
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: #101010;
+  --sidebar-accent: #34323d;
+  --sidebar-accent-foreground: #f5f2e9;
+  --sidebar-border: #3a3942;
+  --sidebar-ring: var(--primary);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-label-foreground: var(--label-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* html,
+  body {
+    @apply antialiased text-foreground bg-background transition-colors duration-300;
+  }
+
+  input::placeholder {
+    @apply text-gray-400;
+  } */
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
