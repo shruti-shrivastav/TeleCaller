@@ -71,3 +71,31 @@ export default defineConfig([
   },
 ])
 ```
+
+
+
+
+Summary — Key Functionalities by Site
+
+SamarthPropertiesPune.co.in
+
+Project showcase and property details
+
+Visual galleries and amenities
+
+Contact/lead collection forms
+
+Marketing & SEO content to attract traffic 
+samarthpropertiespune.co.in
+
+Telecalling-Frontend.vercel.app
+
+CRM interface for internal call agents
+
+Lead management dashboard
+
+Call execution and follow-up tracking
+
+Agent productivity and reporting
+
+If you want, I can also generate a technical architecture diagram or describe how your backend APIs should be structured for this workflow. Let me know if you need that level of detail.
